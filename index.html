@@ -1,0 +1,40 @@
+<html>
+<head>
+    
+<title>Heheh</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<!-- <py-env>
+    - ./data.py
+</py-env> -->
+</head>
+<body>
+<div id="judul" style="font-size: large;"></div>
+<br/><div id="member"></div>
+<py-script> 
+    pyscript.write('judul', "Hanya Sebuah judul")
+    class member:
+        def __init__(self, name, photo):
+            self.name = name
+            self.photo = photo
+
+        
+    list = []
+
+    output_el = Element('member').element
+    
+    list.append( member("jihyo", "http") )
+    list.append( member("sana", "http") )
+    list.append( member("dahyun", "http") )
+    hehe = ''
+    for i in list:
+        hehe += i.name + '\n' 
+            
+        # pyscript.write("member", i.name)
+
+    output_el.innerHTML = hehe
+</py-script>
+
+</body>
+</html>
